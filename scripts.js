@@ -1,9 +1,15 @@
-var a = 10;
-var b = 20;
+var a = 1;
+var b = 2;
 var value = (a * a) + (2 * a * b) - (b * b);
 console.log(value);
 
-
+if (value > 0) {
+    console.log('wynik dodatni');
+} else if (value < 0) {
+    console.log('wynik ujemny');
+} else {
+    console.log('wynik równy zero');
+}
 
 
 /*Stwórz zmienne potrzebne do wykonania działania (a * a) + (2 * a * b) - (b * b) , a jego wynik przypisz do zmiennej value. 
