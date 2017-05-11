@@ -19,7 +19,7 @@ console.log(textReplace);
 
 var halfLength = textReplace.length/2;
 
-console.log("dlugosc polowy zmiennej textReplace:", textReplace.length/2);
+console.log("dlugosc polowy zmiennej textReplace:", halfLength);
 
 var partOfTextReplace = textReplace.slice(0, halfLength);
 console.log(partOfTextReplace);
