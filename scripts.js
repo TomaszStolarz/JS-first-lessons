@@ -7,7 +7,7 @@ function drawtree(h) {
             var star = "";
 
             for (var j = 1; j <= i; j++) {
-                var star = (star += "*");
+                star += "*";
             }
             console.log(star);
         }
