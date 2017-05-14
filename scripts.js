@@ -1,11 +1,30 @@
-var buttonElem = document.getElementById('addElem');
+// function checkOnClickEvent (n) {
+//     console.log(n);
+// }
 
-buttonElem.addEventListener('click', )
-    checkOnclickEvent('button został kliknięty')
+var buttonElem = document.getElementById('js-addElem');
+var list = document.getElementById('list');
+
+buttonElem.addEventListener('click', function() {
+
+    var element = document.createElement('li');
+
+    element.innerHTML = 'item' + itemCount;
+    var li = document.getElementsByTagName('li'); 
+    var liCount = list.length;
+    console.log(liCount);
+    
+    var keywords = ['item']
+    var keywordsArray = keywords.split(', ');
+    var itemCount = keywords.replace ('0', liCount);
+
+    list.appendChild(element);
+});
 
 
 
-
+// var li = document.getElementsByTagName('li'); 
+// console.log(itemsByTagName);
 
 
 
