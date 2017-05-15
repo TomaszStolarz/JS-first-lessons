@@ -104,15 +104,43 @@ function checkRoundWinner(playerPick, computerPick) {
         
         if (winnerIs == 'player') {
             playerResultElem.innerHTML = "Wygrana!";
-            player.score++; 
+            player.score++;
+            playerPointsElem.innerHTML = player.score;
         } else if (winnerIs == 'computer') {
             computerResultElem.innerHTML = "Wygrana!";
             computer.score++;
+            computerPointsElem.innerHTML = computer.score;
         }
+
+         if (computer.score == 2) {
+            
+            alert('Computer wins the match');
+            switch(gameState) {
+                        case 'notStarted':
+                        default:
+                        newGameElem.style.display = 'block';
+                        pickElem.style.display = 'none';
+                        resultsElem.style.display = 'none';                
+            }
+            
+            } else if (
+                (player.score == 2)) {
+                    
+                    alert('Player wins the match');
+                    switch(gameState) {
+                        case 'notStarted':
+                        default:
+                        newGameElem.style.display = 'block';
+                        pickElem.style.display = 'none';
+                        resultsElem.style.display = 'none';
+                    }
+            }
+
 }
 
-console.log(computer.score);
+
 console.log(player.score);
+console.log(computer.score);
 
 
 function playerPick(playerPick) {
@@ -128,6 +156,8 @@ function setGamePoints() {
     playerPointsElem.innerHTML = player.score; 
     computerPointsElem.innerHTML = computer.score;
 }
+
+
 
 
 
