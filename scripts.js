@@ -111,31 +111,16 @@ function checkRoundWinner(playerPick, computerPick) {
             computer.score++;
             computerPointsElem.innerHTML = computer.score;
         }
+        checkIfGameEnded();
+}
 
-         if (computer.score == 2) {
-            
-            alert('Computer wins the match');
-            switch(gameState) {
-                        case 'notStarted':
-                        default:
-                        newGameElem.style.display = 'block';
-                        pickElem.style.display = 'none';
-                        resultsElem.style.display = 'none';                
-            }
-            
-            } else if (
-                (player.score == 2)) {
-                    
-                    alert('Player wins the match');
-                    switch(gameState) {
-                        case 'notStarted':
-                        default:
-                        newGameElem.style.display = 'block';
-                        pickElem.style.display = 'none';
-                        resultsElem.style.display = 'none';
-                    }
-            }
-
+function checkIfGameEnded() {
+    if (computer.score == 2 || player.score == 2) {
+        var winner = computer.score === 2 ? 'Computer' : 'Player'
+        alert(winner + ' wins the match');
+        gameState = 'notStarted';
+        setGameElements();
+    }
 }
 
 
